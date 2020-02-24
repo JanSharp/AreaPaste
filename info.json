@@ -8,6 +8,7 @@
   "homepage": "",
   "description": "Paste settings on all entities in a selected area, including modules!",
   "dependencies": [
-    
+    "base",
+    "RaiseEventProtection >= 0.18.7"
   ]
 }
