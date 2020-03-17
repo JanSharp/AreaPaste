@@ -11,11 +11,21 @@ end
 
 script.on_event(defines.events.on_player_selected_area, function (event)
   if event.item == "AreaPaste-paste-planner" then
-    local player = game.get_player(event.player_index)
+    local player_index = event.player_index
+    local player = game.get_player(player_index)
     local copy_source = try_get_copy_source(player)
     if copy_source then
+      local copy_source_name = copy_source.name
+      local raise_data = {
+        player_index = player_index,
+        source = copy_source,
+      }
       for _, entity in pairs(event.entities) do
-        entity.copy_settings(copy_source)
+        if entity.name == copy_source_name then
+          entity.copy_settings(copy_source)
+          raise_data.destination = entity
+          script.raise_event(defines.events.on_entity_settings_pasted, raise_data)
+        end
       end
     end
   end
