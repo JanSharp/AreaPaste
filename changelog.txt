@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 2020.03.17
+  Info:
+    - Initial release
+  Features:
+    - Add Area Paste tool, which pastes settings from the player's current
+      copy source onto every entity with the same (internal) name
+      (Including the source entity if it is in the area)
+      Also raises events for every paste for compatability
+      (ewww script.raise_event)
+    - Add keybind to create an Area Paste tool
+    - Add short cut to create an Area Paste tool
+    - Add english locale
