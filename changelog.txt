@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 2020-05-26
+  Bugfixes:
+    - Fix items getting deleted when they got removed when pasting
+      If the player is in range, items are inserted into the inventory
+      Otherwise they are spilled on the ground and marked for deconstruction
+  Changes:
+    - No longer use script.raise_event, because LuaEntity.copy_settings can now raise events
+      (since 0.18.26)
+---------------------------------------------------------------------------------------------------
 Version: 0.18.1
 Date: 2020.03.17
   Info:
