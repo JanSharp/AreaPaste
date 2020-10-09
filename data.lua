@@ -1,15 +1,11 @@
 
-local upgrade_planner = data.raw["upgrade-item"]["upgrade-planner"]
-local upgrade_planner_shortcut = data.raw["shortcut"]["give-upgrade-planner"]
-
 data:extend{
   {
     type = "selection-tool",
     name = "AreaPaste-paste-planner",
-    icons = upgrade_planner.icons,
-    icon = upgrade_planner.icon,
-    icon_size = upgrade_planner.icon_size,
-    category = upgrade_planner.category,
+    icon = "__AreaPaste__/graphics/icons/AreaPaste-paste-planner.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
 
     stack_size = 1,
     stackable = false,
@@ -20,8 +16,8 @@ data:extend{
     alt_selection_color = {0, 1, 0},
     selection_cursor_box_type = "copy",
     alt_selection_cursor_box_type = "copy",
-    selection_mode = {"blueprint", "same-force", "friend"},
-    alt_selection_mode = {"blueprint", "same-force", "friend"},
+    selection_mode = {"any-entity", "same-force", "friend"},
+    alt_selection_mode = {"any-entity", "same-force", "friend"},
   },
   {
     type = "custom-input",
@@ -36,9 +32,32 @@ data:extend{
     action = "create-blueprint-item",
     associated_control_input = "AreaPaste-give-paste-planner",
     item_to_create = "AreaPaste-paste-planner",
-    icon = upgrade_planner_shortcut.icon,
-    disabled_icon = upgrade_planner_shortcut.disabled_icon,
-    small_icon = upgrade_planner_shortcut.small_icon,
-    disabled_small_icon = upgrade_planner_shortcut.disabled_small_icon,
+    icon =
+    {
+      filename = "__AreaPaste__/graphics/icons/shortcut-toolbar/mip/AreaPaste-paste-planner-x32-white.png",
+      priority = "extra-high-no-scale",
+      size = 32,
+      scale = 0.5,
+      mipmap_count = 2,
+      flags = {"gui-icon"}
+    },
+    small_icon =
+    {
+      filename = "__AreaPaste__/graphics/icons/shortcut-toolbar/mip/AreaPaste-paste-planner-x24.png",
+      priority = "extra-high-no-scale",
+      size = 24,
+      scale = 0.5,
+      mipmap_count = 2,
+      flags = {"gui-icon"}
+    },
+    disabled_small_icon =
+    {
+      filename = "__AreaPaste__/graphics/icons/shortcut-toolbar/mip/AreaPaste-paste-planner-x24-white.png",
+      priority = "extra-high-no-scale",
+      size = 24,
+      scale = 0.5,
+      mipmap_count = 2,
+      flags = {"gui-icon"}
+    },
   },
 }

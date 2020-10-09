@@ -1,13 +1,11 @@
 {
   "name": "AreaPaste",
-  "version": "0.18.2",
-  "factorio_version": "0.18",
+  "version": "1.0.0",
+  "factorio_version": "1.0",
   "title": "Area Paste",
   "author": "JanSharp",
-  "contact": "",
-  "homepage": "",
-  "description": "Paste settings on all entities in a selected area.\nOnly copy-pastes to entities with the exact same name as the source entity.\nCompatible with mods which change copy paste behavior.",
+  "description": "Paste settings on all entities in a selected area.\nOnly copy-pastes to entities with the exact same name as the source entity.\nCompatible with mods which change copy paste behavior.\nSee mod portal or in game controls for, well, controls.",
   "dependencies": [
-    "base >= 0.18.27"
+    "(?)base >= 0.18.27"
   ]
 }

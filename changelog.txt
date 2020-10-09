@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2020-10-09
+  Changes:
+    - Enable the tool to select literally any entity, for example cars
+  Graphics:
+    - Change (Add) graphics
+    - Add thumbnail
+  Info:
+    - Remove dependency on base
+    - Update mod description
+---------------------------------------------------------------------------------------------------
 Version: 0.18.2
 Date: 2020-05-26
   Bugfixes:
