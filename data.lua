@@ -34,7 +34,7 @@ data:extend{
     item_to_create = "AreaPaste-paste-planner",
     icon =
     {
-      filename = "__AreaPaste__/graphics/icons/shortcut-toolbar/mip/AreaPaste-paste-planner-x32-white.png",
+      filename = "__AreaPaste__/graphics/icons/shortcut-toolbar/mip/AreaPaste-paste-planner-x32.png",
       priority = "extra-high-no-scale",
       size = 32,
       scale = 0.5,
