@@ -8,9 +8,8 @@ data:extend{
     icon_mipmaps = 4,
 
     stack_size = 1,
-    stackable = false,
     draw_label_for_cursor_render = true,
-    flags = {"hidden", "not-stackable", "only-in-cursor"},
+    flags = {"hidden", "not-stackable", "only-in-cursor", "spawnable"},
 
     selection_color = {0, 1, 0},
     alt_selection_color = {0, 1, 0},
@@ -22,16 +21,16 @@ data:extend{
   {
     type = "custom-input",
     name = "AreaPaste-give-paste-planner",
-    action = "create-blueprint-item",
+    action = "spawn-item",
     key_sequence = "CONTROL + SHIFT + mouse-button-1",
-    item_to_create = "AreaPaste-paste-planner",
+    item_to_spawn = "AreaPaste-paste-planner",
   },
   {
     type = "shortcut",
     name = "AreaPaste-give-paste-planner",
-    action = "create-blueprint-item",
+    action = "spawn-item",
     associated_control_input = "AreaPaste-give-paste-planner",
-    item_to_create = "AreaPaste-paste-planner",
+    item_to_spawn = "AreaPaste-paste-planner",
     icon =
     {
       filename = "__AreaPaste__/graphics/icons/shortcut-toolbar/mip/AreaPaste-paste-planner-x32.png",
