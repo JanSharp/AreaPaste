@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: ????
+  Changes:
+    - Update to Factorio 2.0
+  Bugfixes:
+    - Fix spilled items getting teleported to the player instead of staying at the machine when the machine is out of range
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2022-09-12
   Bugfixes:
