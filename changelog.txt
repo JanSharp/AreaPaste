@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: ????
+  Minor Features:
+    - Add support for https://mods.factorio.com/mod/factory-levels
   Changes:
     - Change default key bind from control + shift + left click to control + shift + V to not conflict with 2.0 key binds
 ---------------------------------------------------------------------------------------------------

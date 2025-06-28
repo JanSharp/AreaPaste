@@ -1,4 +1,17 @@
 
+local must_check_for_levels = not not script.active_mods["factory-levels"]
+
+---@param name string
+---@return string
+local function normalize_name(name)
+  if not must_check_for_levels then
+    return name
+  end
+  return string.match(name, "^(.-)%-level%-%d+$") or name
+end
+
+---@param player LuaPlayer
+---@return LuaEntity? copy_source
 local function try_get_copy_source(player)
   local copy_source = player.entity_copy_source
   if copy_source then
@@ -14,10 +27,10 @@ script.on_event(defines.events.on_player_selected_area, function(event)
   ---@cast player -nil
   local copy_source = try_get_copy_source(player)
   if not copy_source then return end
-  local copy_source_name = copy_source.name
+  local copy_source_name = normalize_name(copy_source.name)
   for _, entity in pairs(event.entities) do
     if not copy_source.valid then break end
-    if not entity.valid or entity.name ~= copy_source_name then goto continue end
+    if not entity.valid or normalize_name(entity.name) ~= copy_source_name then goto continue end
     local entity_position = entity.position
     local surface = entity.surface
     -- `copy_settings` raises an event, so every LuaObject could be invalidated by this call.
