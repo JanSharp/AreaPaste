@@ -26,7 +26,7 @@ data:extend{
     type = "custom-input",
     name = "AreaPaste-give-paste-planner",
     action = "spawn-item",
-    key_sequence = "CONTROL + SHIFT + mouse-button-1",
+    key_sequence = "CONTROL + SHIFT + V",
     item_to_spawn = "AreaPaste-paste-planner",
   },
   {

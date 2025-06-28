@@ -2,6 +2,7 @@
 Version: 2.0.1
 Date: ????
   Changes:
+    - Change default key bind from control + shift + left click to control + shift + V to not conflict with 2.0 key binds
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2024-10-24
